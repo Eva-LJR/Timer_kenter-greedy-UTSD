@@ -1,0 +1,6 @@
+*.npy
+*.arrow
+*.bin
+*.npz
+__pycache__/
+
