@@ -3,4 +3,9 @@
 *.bin
 *.npz
 __pycache__/
+*.pkl
+*.partial
 
+final/dataset_cache/
+final/UTSD-1G-0_1/d
+final/output/

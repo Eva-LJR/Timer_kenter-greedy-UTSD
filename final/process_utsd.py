@@ -38,7 +38,11 @@ def find_arrow_file(root_dir):
     raise FileNotFoundError(f"No .arrow file found in {root_dir}")
 
 def load_ds():
-    cache_root = "/home/ljx/timer/timer_kcenter_utsd/new/thuml___utsd"
+    cache_root = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "dataset_cache",
+        "UTSD-1G",
+    )
     arrow_path = find_arrow_file(cache_root)
     print(f"📂 加载本地 Arrow 文件: {arrow_path}")
     ds = Dataset.from_file(arrow_path)
@@ -105,7 +109,11 @@ def _select_one_label_task(args):
 #     return load_dataset("thuml/UTSD", "UTSD-1G", split="train")
 
 def load_ds():
-    cache_root = "/home/ljx/timer/timer_kcenter_utsd/new/thuml___utsd"
+    cache_root = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "dataset_cache",
+        "UTSD-1G",
+    )
     arrow_path = find_arrow_file(cache_root)
     print(f"📂 加载本地 Arrow 文件: {arrow_path}")
     return Dataset.from_file(arrow_path)
